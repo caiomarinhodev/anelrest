@@ -29,9 +29,9 @@ public class Application extends Controller {
     @Transactional
     public static Result login(){
         DynamicForm r = Form.form().bindFromRequest();
-        String l = r.get("anelroute");
-        String p = r.get("AnelRest15kk");
-        if(l.equals("admin") && p.equals("pass")){
+        String l = r.get("login");
+        String p = r.get("pass");
+        if(l.equals("anelroute") && p.equals("AnelRest15kk")){
             session().put("login",l);
             return index();
         }
