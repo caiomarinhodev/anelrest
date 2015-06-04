@@ -21,10 +21,6 @@ public class Application extends Controller {
 
     @Transactional
     public static Result home(){
-        Admin admin = SGDB.getAdmin(session().get("login"));
-        if(admin!=null){
-            return index();
-        }
         return ok(home.render());
     }
 
