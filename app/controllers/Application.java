@@ -14,7 +14,10 @@ public class Application extends Controller {
     @Transactional
     public static Result index() {
         Admin admin = SGDB.getAdmin(session().get("login"));
-        return ok(index.render(admin));
+        if(admin!=null){
+            ok(index.render(admin));
+        }
+        return home();
     }
 
     @Transactional
@@ -64,8 +67,12 @@ public class Application extends Controller {
 
     @Transactional
     public static Result removeUsuario(Long id){
-        SGDB.removeUsuario(id);
-        return index();
+        Admin admin = SGDB.getAdmin(session().get("login"));
+        if(admin!=null){
+            SGDB.removeUsuario(id);
+            return index();
+        }
+        return home();
     }
 
 
