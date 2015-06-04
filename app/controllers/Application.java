@@ -40,7 +40,10 @@ public class Application extends Controller {
 
     @Transactional
     public static Result decrementa(Long id){
-        SGDB.decrementaTotal(1,id);
+        Admin admin = SGDB.getAdmin(session().get("login"));
+        if(admin!=null){
+            SGDB.decrementaTotal(1,id);
+        }
         return index();
     }
 
