@@ -1,8 +1,7 @@
 package controllers;
 
 import models.Admin;
-import models.User;
-import play.*;
+import models.Usuario;
 import play.data.DynamicForm;
 import play.data.Form;
 import play.db.jpa.Transactional;
@@ -60,7 +59,7 @@ public class Application extends Controller {
         return secondscreen(SGDB.getUsuario(cpf));
     }
 
-    public static Result secondscreen(User user){
+    public static Result secondscreen(Usuario user){
         Admin admin = SGDB.getAdmin(session().get("login"));
         return ok(second.render(admin,user));
     }

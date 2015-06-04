@@ -1,6 +1,6 @@
 import models.Admin;
 import models.GenericDAO;
-import models.User;
+import models.Usuario;
 import play.Application;
 import play.GlobalSettings;
 import play.Logger;
@@ -27,7 +27,7 @@ public class Global extends GlobalSettings {
                 List<Admin> lis = dao.findAllByClassName(Admin.class.getName());
                 if (lis.size() <3) {
                     Admin a = new Admin("anelroute","AnelRest15kk");
-                    User u = new User("Teste", "111.111.111-11",10);
+                    Usuario u = new Usuario("Teste", "111.111.111-11",10);
                     dao.persist(a);
                     dao.persist(u);
 
