@@ -20,13 +20,13 @@ import play.mvc.Http.Context.Implicit._
 import views.html._
 
 /**/
-object second extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[Admin,User,play.twirl.api.HtmlFormat.Appendable] {
+object second extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[Admin,Usuario,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(admin: Admin, user: User):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(admin: Admin, user: Usuario):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*1.28*/("""
+Seq[Any](format.raw/*1.31*/("""
 """),format.raw/*2.1*/("""<!DOCTYPE html>
 <html lang="en">
 
@@ -110,7 +110,7 @@ Seq[Any](format.raw/*1.28*/("""
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
-                            <i class="fa fa-info-circle"></i>  <strong>Like SB Admin?</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">SB Admin 2</a> for additional features!
+                            <i class="fa fa-info-circle"></i>  <strong>Abaixo Copie o Link e gere um QR CODE</strong>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ Seq[Any](format.raw/*1.28*/("""
                           <div class="panel-body">
                               <div class="row">
                                   <div class="col-lg-8 col-lg-offset-2">
-                                      Link: http://localhost:9000/decrementa/"""),_display_(/*100.79*/user/*100.83*/.getId),format.raw/*100.89*/("""
+                                      https://anel.herokuapp.com/decrementa/"""),_display_(/*100.78*/user/*100.82*/.getId),format.raw/*100.88*/("""
                                   """),format.raw/*101.35*/("""</div>
                                   <div class="col-lg-4 col-lg-offset-4">
                                       <a class="btn btn-primary btn-block" href="/index">OK</a>
@@ -164,19 +164,19 @@ Seq[Any](format.raw/*1.28*/("""
 """))}
   }
 
-  def render(admin:Admin,user:User): play.twirl.api.HtmlFormat.Appendable = apply(admin,user)
+  def render(admin:Admin,user:Usuario): play.twirl.api.HtmlFormat.Appendable = apply(admin,user)
 
-  def f:((Admin,User) => play.twirl.api.HtmlFormat.Appendable) = (admin,user) => apply(admin,user)
+  def f:((Admin,Usuario) => play.twirl.api.HtmlFormat.Appendable) = (admin,user) => apply(admin,user)
 
   def ref: this.type = this
 
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Jun 04 18:22:39 BRT 2015
+                  DATE: Fri Jun 05 11:45:26 BRT 2015
                   SOURCE: C:/Users/Caio/Downloads/activator-1.2.10/demic/app/views/second.scala.html
-                  HASH: 5355a6ed78e73cecdd004f014f73d2de3856f740
-                  MATRIX: 728->1|842->27|869->28|1201->333|1215->338|1245->347|3553->2628|3567->2633|3597->2642|4731->3749|4744->3753|4773->3761|5090->4050|5104->4054|5132->4060|5196->4095
+                  HASH: 383f76f7e6d5efe4ab9888a1b762865f2fa65860
+                  MATRIX: 731->1|848->30|875->31|1207->336|1221->341|1251->350|3559->2631|3573->2636|3603->2645|4627->3642|4640->3646|4669->3654|4985->3942|4999->3946|5027->3952|5091->3987
                   LINES: 26->1|29->1|30->2|41->13|41->13|41->13|99->71|99->71|99->71|123->95|123->95|123->95|128->100|128->100|128->100|129->101
                   -- GENERATED --
               */

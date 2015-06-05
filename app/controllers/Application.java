@@ -14,7 +14,7 @@ public class Application extends Controller {
     public static Result index() {
         Admin admin = SGDB.getAdmin(session().get("login"));
         if(admin!=null){
-            ok(index.render(admin));
+            return ok(index.render(admin));
         }
         return home();
     }
@@ -27,11 +27,14 @@ public class Application extends Controller {
     @Transactional
     public static Result login(){
         DynamicForm r = Form.form().bindFromRequest();
-        String l = r.get("login");
-        String p = r.get("pass");
-        if(l.equals("anelroute") && p.equals("AnelRest15kk")){
-            session().put("login",l);
-            return index();
+        String l = r.get("log");
+        String p = r.get("senha");
+        Admin ad = SGDB.getAdmin("anelroute");
+        if(ad!=null){
+            if(l.equals(ad.getLogin()) && p.equals(ad.getPass())){
+                session().put("login",l);
+                return index();
+            }
         }
         return home();
     }

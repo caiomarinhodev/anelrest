@@ -63,10 +63,10 @@ Seq[Any](format.raw/*1.4*/("""
                         <form method="post" action="/login">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="login" type="text" required="required" autofocus="autofocus"/>
+                                    <input class="form-control" placeholder="E-mail" name="log" type="text" autofocus="autofocus"/>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="pass" type="password" required="required" />
+                                    <input class="form-control" placeholder="Password" name="senha" type="password" required/>
                                 </div>
                                 <button type="submit" class="btn btn-sm btn-success">Sign in</button>
                             </fieldset>
@@ -101,10 +101,10 @@ Seq[Any](format.raw/*1.4*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Jun 04 13:28:24 BRT 2015
+                  DATE: Fri Jun 05 11:45:26 BRT 2015
                   SOURCE: C:/Users/Caio/Downloads/activator-1.2.10/demic/app/views/home.scala.html
-                  HASH: e6f11fda6b972aa6d6d55ad33aa000698e4bb77d
-                  MATRIX: 715->1|804->3|831->4|2825->1970|2854->1971|2890->1980|2959->2022|2987->2023|3015->2024
+                  HASH: cf65fe4851ff96399a231c520de3ebb27b50bbd3
+                  MATRIX: 715->1|804->3|831->4|2792->1937|2821->1938|2857->1947|2926->1989|2954->1990|2982->1991
                   LINES: 26->1|29->1|30->2|83->55|83->55|84->56|85->57|85->57|86->58
                   -- GENERATED --
               */
