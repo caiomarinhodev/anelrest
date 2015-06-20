@@ -1,6 +1,6 @@
-// @SOURCE:C:/Users/Caio/Downloads/activator-1.2.10/demic/conf/routes
-// @HASH:42c514a1c12490ca29899809eec219df719061c6
-// @DATE:Thu Jun 04 13:39:21 BRT 2015
+// @SOURCE:C:/Users/Caio/Downloads/ANEL/anelrest/conf/routes
+// @HASH:1ccce0af352734519ba193b516c964d171fa7088
+// @DATE:Sat Jun 20 10:18:25 BRT 2015
 
 
 import scala.language.reflectiveCalls
@@ -55,47 +55,61 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "removeU
         
 
 // @LINE:9
-private[this] lazy val controllers_Application_decrementa3_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("decrementa/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_Application_decrementa3_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("decrementa/"),DynamicPart("id", """[^/]+""",true),StaticPart("/"),DynamicPart("code", """[^/]+""",true))))
 private[this] lazy val controllers_Application_decrementa3_invoker = createInvoker(
-controllers.Application.decrementa(fakeValue[Long]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "decrementa", Seq(classOf[Long]),"GET", """""", Routes.prefix + """decrementa/$id<[^/]+>"""))
+controllers.Application.decrementa(fakeValue[Long], fakeValue[Integer]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "decrementa", Seq(classOf[Long], classOf[Integer]),"GET", """""", Routes.prefix + """decrementa/$id<[^/]+>/$code<[^/]+>"""))
         
 
-// @LINE:11
-private[this] lazy val controllers_Application_login4_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
-private[this] lazy val controllers_Application_login4_invoker = createInvoker(
+// @LINE:10
+private[this] lazy val controllers_Application_renderEdit4_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("edit/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_Application_renderEdit4_invoker = createInvoker(
+controllers.Application.renderEdit(fakeValue[Long]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "renderEdit", Seq(classOf[Long]),"GET", """""", Routes.prefix + """edit/$id<[^/]+>"""))
+        
+
+// @LINE:13
+private[this] lazy val controllers_Application_login5_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
+private[this] lazy val controllers_Application_login5_invoker = createInvoker(
 controllers.Application.login(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "login", Nil,"POST", """""", Routes.prefix + """login"""))
         
 
-// @LINE:13
-private[this] lazy val controllers_Application_addUsuario5_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("add/usuario"))))
-private[this] lazy val controllers_Application_addUsuario5_invoker = createInvoker(
+// @LINE:14
+private[this] lazy val controllers_Application_incrementa6_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("incrementa"))))
+private[this] lazy val controllers_Application_incrementa6_invoker = createInvoker(
+controllers.Application.incrementa(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "incrementa", Nil,"POST", """""", Routes.prefix + """incrementa"""))
+        
+
+// @LINE:15
+private[this] lazy val controllers_Application_addUsuario7_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("add/usuario"))))
+private[this] lazy val controllers_Application_addUsuario7_invoker = createInvoker(
 controllers.Application.addUsuario(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "addUsuario", Nil,"POST", """""", Routes.prefix + """add/usuario"""))
         
 
-// @LINE:18
-private[this] lazy val controllers_Assets_at6_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
-private[this] lazy val controllers_Assets_at6_invoker = createInvoker(
+// @LINE:20
+private[this] lazy val controllers_Assets_at8_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at8_invoker = createInvoker(
 controllers.Assets.at(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
         
 
-// @LINE:19
-private[this] lazy val controllers_Assets_at7_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("remove/assets/"),DynamicPart("file", """.+""",false))))
-private[this] lazy val controllers_Assets_at7_invoker = createInvoker(
+// @LINE:21
+private[this] lazy val controllers_Assets_at9_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("remove/assets/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at9_invoker = createInvoker(
 controllers.Assets.at(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """remove/assets/$file<.+>"""))
         
 
-// @LINE:20
-private[this] lazy val controllers_Assets_at8_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("add/assets/"),DynamicPart("file", """.+""",false))))
-private[this] lazy val controllers_Assets_at8_invoker = createInvoker(
+// @LINE:22
+private[this] lazy val controllers_Assets_at10_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("add/assets/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at10_invoker = createInvoker(
 controllers.Assets.at(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """add/assets/$file<.+>"""))
         
-def documentation = List(("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """index""","""controllers.Application.index()"""),("""GET""", prefix,"""controllers.Application.home()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """remove/$id<[^/]+>""","""controllers.Application.removeUsuario(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """decrementa/$id<[^/]+>""","""controllers.Application.decrementa(id:Long)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Application.login()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """add/usuario""","""controllers.Application.addUsuario()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public/assets/", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """remove/assets/$file<.+>""","""controllers.Assets.at(path:String = "/public/assets/", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """add/assets/$file<.+>""","""controllers.Assets.at(path:String = "/public/assets/", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """index""","""controllers.Application.index()"""),("""GET""", prefix,"""controllers.Application.home()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """remove/$id<[^/]+>""","""controllers.Application.removeUsuario(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """decrementa/$id<[^/]+>/$code<[^/]+>""","""controllers.Application.decrementa(id:Long, code:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """edit/$id<[^/]+>""","""controllers.Application.renderEdit(id:Long)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Application.login()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """incrementa""","""controllers.Application.incrementa()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """add/usuario""","""controllers.Application.addUsuario()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public/assets/", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """remove/assets/$file<.+>""","""controllers.Assets.at(path:String = "/public/assets/", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """add/assets/$file<.+>""","""controllers.Assets.at(path:String = "/public/assets/", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -129,40 +143,40 @@ case controllers_Application_removeUsuario2_route(params) => {
 
 // @LINE:9
 case controllers_Application_decrementa3_route(params) => {
-   call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_Application_decrementa3_invoker.call(controllers.Application.decrementa(id))
+   call(params.fromPath[Long]("id", None), params.fromPath[Integer]("code", None)) { (id, code) =>
+        controllers_Application_decrementa3_invoker.call(controllers.Application.decrementa(id, code))
    }
 }
         
 
-// @LINE:11
-case controllers_Application_login4_route(params) => {
-   call { 
-        controllers_Application_login4_invoker.call(controllers.Application.login())
+// @LINE:10
+case controllers_Application_renderEdit4_route(params) => {
+   call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_Application_renderEdit4_invoker.call(controllers.Application.renderEdit(id))
    }
 }
         
 
 // @LINE:13
-case controllers_Application_addUsuario5_route(params) => {
+case controllers_Application_login5_route(params) => {
    call { 
-        controllers_Application_addUsuario5_invoker.call(controllers.Application.addUsuario())
+        controllers_Application_login5_invoker.call(controllers.Application.login())
    }
 }
         
 
-// @LINE:18
-case controllers_Assets_at6_route(params) => {
-   call(Param[String]("path", Right("/public/assets/")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at6_invoker.call(controllers.Assets.at(path, file))
+// @LINE:14
+case controllers_Application_incrementa6_route(params) => {
+   call { 
+        controllers_Application_incrementa6_invoker.call(controllers.Application.incrementa())
    }
 }
         
 
-// @LINE:19
-case controllers_Assets_at7_route(params) => {
-   call(Param[String]("path", Right("/public/assets/")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at7_invoker.call(controllers.Assets.at(path, file))
+// @LINE:15
+case controllers_Application_addUsuario7_route(params) => {
+   call { 
+        controllers_Application_addUsuario7_invoker.call(controllers.Application.addUsuario())
    }
 }
         
@@ -171,6 +185,22 @@ case controllers_Assets_at7_route(params) => {
 case controllers_Assets_at8_route(params) => {
    call(Param[String]("path", Right("/public/assets/")), params.fromPath[String]("file", None)) { (path, file) =>
         controllers_Assets_at8_invoker.call(controllers.Assets.at(path, file))
+   }
+}
+        
+
+// @LINE:21
+case controllers_Assets_at9_route(params) => {
+   call(Param[String]("path", Right("/public/assets/")), params.fromPath[String]("file", None)) { (path, file) =>
+        controllers_Assets_at9_invoker.call(controllers.Assets.at(path, file))
+   }
+}
+        
+
+// @LINE:22
+case controllers_Assets_at10_route(params) => {
+   call(Param[String]("path", Right("/public/assets/")), params.fromPath[String]("file", None)) { (path, file) =>
+        controllers_Assets_at10_invoker.call(controllers.Assets.at(path, file))
    }
 }
         

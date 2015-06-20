@@ -7,10 +7,11 @@ GET         /index                       controllers.Application.index()
 GET         /                            controllers.Application.home()
 GET         /remove/:id                  controllers.Application.removeUsuario(id: Long)
 GET         /decrementa/:id/:code        controllers.Application.decrementa(id: Long, code:Integer)
+GET         /edit/:id                    controllers.Application.renderEdit(id: Long)
 
 
 POST        /login                       controllers.Application.login()
-
+POST        /incrementa                  controllers.Application.incrementa()
 POST        /add/usuario                 controllers.Application.addUsuario()
 
 

@@ -1,6 +1,6 @@
-// @SOURCE:C:/Users/Caio/Downloads/activator-1.2.10/demic/conf/routes
-// @HASH:42c514a1c12490ca29899809eec219df719061c6
-// @DATE:Thu Jun 04 13:39:21 BRT 2015
+// @SOURCE:C:/Users/Caio/Downloads/ANEL/anelrest/conf/routes
+// @HASH:1ccce0af352734519ba193b516c964d171fa7088
+// @DATE:Sat Jun 20 10:18:25 BRT 2015
 
 package controllers;
 

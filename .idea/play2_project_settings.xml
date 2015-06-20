@@ -14,15 +14,15 @@
           <value>
             <ProjectSettingsEntry>
               <option name="version" value="2.3.9" />
-              <option name="sourceDir" value="C:\Users\Caio\Downloads\activator-1.2.10\demic\conf" />
-              <option name="confDir" value="C:\Users\Caio\Downloads\activator-1.2.10\demic\app" />
+              <option name="sourceDir" value="C:\Users\Caio\Downloads\ANEL\anelrest\conf" />
+              <option name="confDir" value="C:\Users\Caio\Downloads\ANEL\anelrest\app" />
               <option name="routesImports">
                 <list>
                   <option value="controllers.Assets.Asset" />
                   <option value="play.libs.F" />
                 </list>
               </option>
-              <option name="uri" value="/C:/Users/Caio/Downloads/activator-1.2.10/demic" />
+              <option name="uri" value="/C:/Users/Caio/Downloads/ANEL/anelrest" />
             </ProjectSettingsEntry>
           </value>
         </entry>

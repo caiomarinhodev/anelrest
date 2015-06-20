@@ -1,4 +1,4 @@
-name := """demic"""
+name := """anel"""
 
 version := "1.0-SNAPSHOT"
 

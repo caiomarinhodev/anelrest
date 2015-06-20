@@ -48,6 +48,22 @@ public class Application extends Controller {
     }
 
     @Transactional
+    public static Result incrementa(){
+        DynamicForm r = Form.form().bindFromRequest();
+        Long id = Long.parseLong(r.get("id"));
+        int t = Integer.parseInt(r.get("total"));
+        SGDB.incrementaTotal(t,id);
+        return index();
+    }
+
+    @Transactional
+    public static Result renderEdit(Long id){
+        Admin admin = SGDB.getAdmin(session().get("login"));
+        Usuario u = SGDB.getUsuario(id);
+        return ok(edit.render(admin,u));
+    }
+
+    @Transactional
     public static Result addUsuario(){
         DynamicForm r = Form.form().bindFromRequest();
         String nome = r.get("nome");
