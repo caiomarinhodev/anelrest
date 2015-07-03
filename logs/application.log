@@ -1,36 +1,33 @@
-2015-06-20 10:18:19,749 - [INFO] - from play in pool-4-thread-4 
+2015-07-03 19:45:46,788 - [INFO] - from play in pool-4-thread-4 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-06-20 10:19:04,011 - [INFO] - from play in play-internal-execution-context-1 
+2015-07-03 19:46:48,684 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
 
-2015-06-20 10:19:04,210 - [INFO] - from play in play-internal-execution-context-1 
+2015-07-03 19:46:48,943 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2015-06-20 10:19:05,598 - [INFO] - from application in play-internal-execution-context-1 
+2015-07-03 19:46:51,066 - [INFO] - from application in play-internal-execution-context-1 
 inicializada...
 
-2015-06-20 10:19:06,319 - [INFO] - from application in play-internal-execution-context-1 
+2015-07-03 19:46:51,397 - [INFO] - from application in play-internal-execution-context-1 
 Inserindo dados no BD.
 
-2015-06-20 10:19:06,340 - [INFO] - from play in play-internal-execution-context-1 
+2015-07-03 19:46:51,411 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-06-20 10:20:23,329 - [INFO] - from application in play-internal-execution-context-3 
-desligada...
+2015-07-03 19:47:18,507 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+User:caio
 
-2015-06-20 10:20:24,005 - [INFO] - from play in play-internal-execution-context-3 
-datasource [jdbc:h2:mem:play;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+2015-07-03 19:48:03,492 - [INFO] - from application in play-akka.actor.default-dispatcher-19 
+User:Teste
 
-2015-06-20 10:20:24,010 - [INFO] - from play in play-internal-execution-context-3 
-database [default] connected at jdbc:h2:mem:play
+2015-07-03 19:48:04,053 - [INFO] - from application in play-akka.actor.default-dispatcher-20 
+User:caio
 
-2015-06-20 10:20:24,345 - [INFO] - from application in play-internal-execution-context-3 
-inicializada...
+2015-07-03 19:48:06,722 - [INFO] - from application in play-akka.actor.default-dispatcher-19 
+User:Teste
 
-2015-06-20 10:20:24,352 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-06-20 10:20:55,891 - [INFO] - from application in pool-4-thread-4 
+2015-07-03 19:54:50,554 - [INFO] - from application in pool-4-thread-4 
 desligada...
 

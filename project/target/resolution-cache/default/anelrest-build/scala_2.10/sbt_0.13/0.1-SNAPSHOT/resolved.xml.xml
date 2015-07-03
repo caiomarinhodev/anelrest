@@ -4,7 +4,7 @@
 		module="anelrest-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150620102214"
+		publication="20150703194501"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

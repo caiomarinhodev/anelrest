@@ -14,8 +14,8 @@
           <value>
             <ProjectSettingsEntry>
               <option name="version" value="2.3.9" />
-              <option name="sourceDir" value="C:\Users\Caio\Downloads\ANEL\anelrest\conf" />
-              <option name="confDir" value="C:\Users\Caio\Downloads\ANEL\anelrest\app" />
+              <option name="sourceDir" value="C:\Users\Caio\Downloads\ANEL\anelrest\app" />
+              <option name="confDir" value="C:\Users\Caio\Downloads\ANEL\anelrest\conf" />
               <option name="routesImports">
                 <list>
                   <option value="controllers.Assets.Asset" />

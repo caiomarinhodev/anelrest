@@ -1,13 +1,18 @@
 package controllers;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import models.Admin;
 import models.Usuario;
 import play.data.DynamicForm;
 import play.data.Form;
 import play.db.jpa.Transactional;
+import play.libs.Json;
 import play.mvc.*;
 
 import views.html.*;
+
+import play.Logger;
 
 public class Application extends Controller {
     @Transactional
@@ -44,7 +49,11 @@ public class Application extends Controller {
         if(code==33){
             SGDB.decrementaTotal(1,id);
         }
-        return index();
+        Usuario u = SGDB.getUsuario(id);
+        Logger.info("User:"+u.getNome());
+        ObjectNode result = Json.newObject();
+        JsonNode obj = Json.toJson(u);
+        return ok(obj);
     }
 
     @Transactional
